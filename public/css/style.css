@@ -22,4 +22,8 @@
     .color-selector input:checked + label {
         @apply ring-primary ring-2; 
     }
+
+    .input-box {
+        @apply capitalize block w-full border border-gray-300 py-3 px-4 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0; 
+    }
 }

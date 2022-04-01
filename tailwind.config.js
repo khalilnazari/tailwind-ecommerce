@@ -20,7 +20,8 @@ module.exports = {
         }, 
 
         colors: {
-          'primary': '#FD3D57', 
+          'primary': '#eb3499',
+          // 'primary': '#FD3D57', 
         }
       },
     },
