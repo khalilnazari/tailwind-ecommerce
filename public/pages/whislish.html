@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- tailwind build css -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <title>Account | tailwind ecommerce</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="py-4 shadow-sm bg-white">
+        <div class="container flex justify-between items-center">
+            <!-- logo -->
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="logo" class="w-10 h-10">
+            </a>
+
+            <!-- serachbar -->
+            <div class="w-full max-w-xl relative flex">
+                <span class="absolute top-3 left-4 text-lg text-gray-400">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none" placeholder="Search here...">
+                <button class="bg-primary border border-primary text-white px-8 rounded-r-md hover:text-primary hover:bg-transparent transition">Search</button>
+            </div>
+
+            <div class="flex item-center space-x-4">
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="text-sx leading-3">Wish List</div>
+                    <span class="absolute right-0 -top-1 w-5 h-5 bg-primary text-white rounded-full flex items-center justify-center text-sx ">8</span>
+                </a>
+
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="text-sx leading-3">Cart</div>
+                    <span class="absolute -right-3 -top-1 w-5 h-5 bg-primary text-white rounded-full flex items-center justify-center text-sx ">8</span>
+                </a>
+
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="text-sx leading-3">Account</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- header end  -->
+
+    <!-- navbar -->
+    <nav class="bg-slate-800">
+        <div class="container flex">
+            <!-- categories -->
+            <div class="px-8 py-4 bg-primary flex items-center cursor-pointer relative group">
+                <span class="text-white">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <span class="capitalize ml-2 text-white ">All categories</span>
+
+                <div class="absolute top-full left-0 w-full bg-white shadow-md py-3 divide-y divide-slate-200 divide-dashed opacity-0 group-hover:opacity-100 invisible group-hover:visible transition duration-500 ease-in-out">
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-couch h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Furniture</span>
+                    </a>
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-kitchen-set h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Kitchen set</span>
+                    </a>
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-shirt h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Cloths</span>
+                    </a>
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-sink h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Bathing set</span>
+                    </a>
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-person-hiking h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Outdoors</span>
+                    </a>   
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-bed w-5 h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Bedroom</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- navbar links -->
+            <div class="flex items-center justify-between flex-grow pl-12">
+                <div class="flex items-center space-x-6 capitalize">
+                    <a href="../index.html" class="text-slate-300 hover:text-slate-200 transition">Home</a>
+                    <a href="./shop.html" class="text-slate-300 hover:text-slate-200 transition">Shop</a>
+                    <a href="./about.html" class="text-slate-300 hover:text-slate-200 transition">About us</a>
+                    <a href="./contact.html" class="text-slate-300 hover:text-slate-200 transition">Contact us</a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <a href="./login.html" class="text-slate-300 hover:text-slate-200 transition">Logout</a> 
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- bredcrums -->
+    <section>
+        <div class="container py-4 flex items-center space-x-4">
+            <a href="../index.html" class=text-primary text-base"><i class="fas fa-home"></i></a>
+            <i class="text-sm text-gray-400 fas fa-chevron-right"></i>
+            <a href="./whislish.html" class="text-gray font-medium">Whishlist</a>
+        </div>
+    </section>
+    <!-- bredcrums end -->
+
+    <!-- account wrapper -->
+    <section class="account-wrapper pt-4 pb-16">
+        <div class="container">
+            <div class="grid grid-cols-12 items-start gap-4">
+                <!-- sidebar -->
+                <div class="col-span-3">
+                    <!-- user avatar -->
+                    <div class="px-4 py-3 shadow flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <img src="../images/avatar.svg" alt="" class="w-14 h-14"/>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-gray-600">Hello</p>
+                            <h4 class="text-gray-800 font-medium">Khalil Nazari</h4>
+                        </div>
+                    </div>
+    
+                    <!-- links -->
+                    <div class="p-4 shadow mt-6 rounded bg-white divide-y divide-gray-200 space-y-4 text-gray-600 ">
+                        <!-- manage account -->
+                        <div class="space-y-1 pl-8">
+                            <a href="#" class="relative block font-medium capitalize transition">
+                                <span class="absolute -left-8 top-0 text-base"><i class="far fa-address-card"></i></span>
+                                Manage account
+                            </a>
+                            <a href="#" class="relative hover:text-primary block capitalize transition">Profile info</a>
+                            <a href="#" class="relative hover:text-primary block capitalize transition">Manage address</a>
+                            <a href="#" class="relative hover:text-primary block capitalize transition">Change password</a>
+                            <a href="#" class="relative hover:text-primary block capitalize transition">Manage account</a>
+                        </div>
+    
+                        <!-- order history -->
+                        <div class="space-y-1 pl-8 pt-4">
+                            <a href="#" class="relative text-slate-800 block font-medium capitalize transition">
+                                <span class="absolute -left-8 top-0 text-base"><i class="fa-solid fa-gift"></i></span>
+                                My order history
+                            </a>
+                            <a href="#" class="relative hover:text-primary block capitalize transition">My returns</a>
+                            <a href="#" class="relative hover:text-primary block capitalize transition">My cancellations</a>
+                            <a href="#" class="relative hover:text-primary block capitalize transition">My reviews</a>
+                        </div>
+    
+                        <!-- paymetns -->
+                        <div class="space-y-1 pl-8 pt-4">
+                            <a href="#" class="relative text-slate-800 block font-medium capitalize transition">
+                                <span class="absolute -left-8 top-0 text-base"><i class="far fa-address-card"></i></span>
+                                Payment Methods
+                            </a>
+                            <a href="#" class="relative hover:text-primary block capitalize transition">Vouchers</a>
+                        </div>
+    
+                        <!-- Whishlist -->
+                        <div class="space-y-1 pl-8 pt-4">
+                            <a href="#" class="relative text-primary block font-medium capitalize transition">
+                                <span class="absolute -left-8 top-0 text-base">
+                                    <i class="fa-solid fa-heart"></i>
+                                </span>
+                                My Whishlist
+                            </a>
+                        </div>
+    
+                        <!-- lgoout -->
+                        <div class="space-y-1 pl-8 pt-4">
+                            <a href="#" class="relative text-slate-800 block font-medium capitalize transition">
+                                <span class="absolute -left-8 top-0 text-base">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                </span>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- sidebar end -->
+    
+                <!-- wishlist -->
+                <div class="col-span-9 space-y-4">
+                    <!-- list -->
+                    <div class="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
+                        <!-- imgage -->
+                        <div class="w-28">
+                            <img src="../images/bedroom.jpg" alt="wishlist" class="w-full">
+                        </div>
+
+                        <!-- content -->
+                        <div class="w-1/3">
+                            <h2 class="text-slate-800 text-xl font-medium uppercase">Modern L shape sofa</h2>
+                            <p class="text-slate-500 text-sm">
+                                Availability: <span class="text-green-600">In Stock</span>
+                            </p>
+                        </div>
+
+                        <div class="text-primary text-lg font-semibold">$320</div>
+                        <a href="#" class="px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary uppercase font-roboto font-medium transition">Add to cart</a>
+                        <div class="text-slate-600 cursor-pointer hover:text-primary transition">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
+                        <!-- imgage -->
+                        <div class="w-28">
+                            <img src="../images/bedroom.jpg" alt="wishlist" class="w-full">
+                        </div>
+
+                        <!-- content -->
+                        <div class="w-1/3">
+                            <h2 class="text-slate-800 text-xl font-medium uppercase">Modern L shape sofa</h2>
+                            <p class="text-slate-500 text-sm">
+                                Availability: <span class="text-green-600">In Stock</span>
+                            </p>
+                        </div>
+
+                        <div class="text-primary text-lg font-semibold">$320</div>
+                        <a href="#" class="px-6 py-2 text-center text-sm text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary uppercase font-roboto font-medium transition">Add to cart</a>
+                        <div class="text-slate-600 cursor-pointer hover:text-primary transition">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
+                        <!-- imgage -->
+                        <div class="w-28">
+                            <img src="../images/bedroom.jpg" alt="wishlist" class="w-full">
+                        </div>
+
+                        <!-- content -->
+                        <div class="w-1/3">
+                            <h2 class="text-slate-800 text-xl font-medium uppercase">Modern L shape sofa</h2>
+                            <p class="text-slate-500 text-sm">
+                                Availability: <span class="text-green-600">Out of Stock</span>
+                            </p>
+                        </div>
+
+                        <div class="text-primary text-lg font-semibold">$320</div>
+                        
+                        <a href="#" class="cursor-not-allowed px-6 py-2 text-center text-sm text-primary bg-transparent border border-primary rounded  uppercase font-roboto font-medium transition">Add to cart</a>
+                        <div class="text-slate-600 cursor-pointer hover:text-primary transition">
+                            <i class="fas fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- wishlist end -->
+            </div>
+        </div>
+    </section>
+    <!-- account wrapper end -->
+
+    <!-- footer  -->
+    <footer>
+        <div class="container pt-10 pb-12 border-t border-gray-100 grid grid-cols-3 gap-11">
+            <div class="cols-span-1 space-y-8">
+                <!-- <img src="./images/" alt=""> -->
+                <a href="../index.html">
+                    <img src="../images/logo.svg" alt="logo" class="w-10 h-10">
+                </a>
+                <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, adipisci! Sit fugiat doloribus reiciendis assumenda ducimus, unde debitis cupiditate eius?</p>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                
+            </div>
+
+
+            <div class="col-span-2 grid grid-cols-2 gap-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Support</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Pricing</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentation</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guides</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API Status</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Company</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">About</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Blog</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Jobs</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Press</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Legal</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Claim</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Privacy</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Policy</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Terms</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </footer>
+    <section class="p-5 bg-slate-900">
+        <div class="container flex items-center justify-between">
+            <p class="text-slate-300">&copy; Company - All right reserved</p>
+            <p class="text-slate-300">Payment methods</p>
+        </div>
+    </section>
+    <!-- footer end -->
+</body>
+</html>
