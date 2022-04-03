@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- tailwind build css -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <title>Account | tailwind ecommerce</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="py-4 shadow-sm bg-white">
+        <div class="container flex justify-between items-center">
+            <!-- logo -->
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="logo" class="w-10 h-10">
+            </a>
+
+            <!-- serachbar -->
+            <div class="w-full max-w-xl relative flex">
+                <span class="absolute top-3 left-4 text-lg text-gray-400">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none" placeholder="Search here...">
+                <button class="bg-primary border border-primary text-white px-8 rounded-r-md hover:text-primary hover:bg-transparent transition">Search</button>
+            </div>
+
+            <div class="flex item-center space-x-4">
+                <a href="./whislist.html" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="text-sx leading-3">Wishlist</div>
+                    <span class="absolute right-0 -top-1 w-5 h-5 bg-primary text-white rounded-full flex items-center justify-center text-sx ">8</span>
+                </a>
+
+                <a href="./cart.html" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="text-sx leading-3">Cart</div>
+                    <span class="absolute -right-3 -top-1 w-5 h-5 bg-primary text-white rounded-full flex items-center justify-center text-sx ">8</span>
+                </a>
+
+                <a href="./account.html" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="text-sx leading-3">Account</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- header end  -->
+
+    <!-- navbar -->
+    <nav class="bg-slate-800">
+        <div class="container flex">
+            <!-- categories -->
+            <div class="px-8 py-4 bg-primary flex items-center cursor-pointer relative group">
+                <span class="text-white">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <span class="capitalize ml-2 text-white ">All categories</span>
+
+                <div class="absolute top-full left-0 w-full bg-white shadow-md py-3 divide-y divide-slate-200 divide-dashed opacity-0 group-hover:opacity-100 invisible group-hover:visible transition duration-500 ease-in-out">
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-couch h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Furniture</span>
+                    </a>
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-kitchen-set h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Kitchen set</span>
+                    </a>
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-shirt h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Cloths</span>
+                    </a>
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-sink h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Bathing set</span>
+                    </a>
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-person-hiking h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Outdoors</span>
+                    </a>   
+
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-slate-100 transition">
+                        <i class="fa-solid fa-bed w-5 h-5 object-contain"></i>
+                        <span class="ml-6 text-slate-800 text-sm">Bedroom</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- navbar links -->
+            <div class="flex items-center justify-between flex-grow pl-12">
+                <div class="flex items-center space-x-6 capitalize">
+                    <a href="../index.html" class="text-slate-300 hover:text-slate-200 transition">Home</a>
+                    <a href="./shop.html" class="text-slate-300 hover:text-slate-200 transition">Shop</a>
+                    <a href="./about.html" class="text-slate-300 hover:text-slate-200 transition">About us</a>
+                    <a href="./contact.html" class="text-slate-300 hover:text-slate-200 transition">Contact us</a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <a href="./login.html" class="text-slate-300 hover:text-slate-200 transition">Logout</a> 
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- bredcrums -->
+    <section>
+        <div class="container py-4 flex items-center space-x-4">
+            <a href="../index.html" class=text-primary text-base"><i class="fas fa-home"></i></a>
+            <i class="text-sm text-gray-400 fas fa-chevron-right"></i>
+            <a href="./cart.html" class="text-gray font-medium">Cart</a>
+        </div>
+    </section>
+    <!-- bredcrums end -->
+
+    <!-- cart wrapper -->
+    <section class="py-10">
+        <div class="container grid grid-cols-12 gap-4">
+            <!-- cart products -->
+            <div class="col-span-8 space-y-5">
+                <!-- cart -->
+                <div class="flex items-start gap-4 p-4 bg-white hover:bg-gray-100 transition duration-200 rounded border border-gray-200">
+                    <!-- image -->
+                    <img src="../images/sofa.jpg" alt="sofa" class="w-4/12 object-cover">
+                    <!-- detail -->
+                    <div class="flex-1">
+                        <h2 class="text-md font-medium uppercase">Comfortable L Shap Sofa</h2>
+                        
+                        <div class="flex justify-between items-start gap-10 mt-3">
+                            <div class="space-y-1">
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Availability: </span>
+                                    <span class="text-green-600 font-light">In stock</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Brand: </span>
+                                    <span class="font-light">xxx brand</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Category: </span>
+                                    <span class="font-light">Sofa</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Color: </span>
+                                    <span class="font-light">Black</span>
+                                </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class="text-sm space-y-2">
+                                <p class="text-gray-500 font-semibold space-y-2">
+                                    <span>Price: </span>
+                                    <span class="font-light">$89.34</span>
+                                </p>
+
+                                <!-- Quantity -->
+                                <div class="flex border border-gray-300 text-gray-500 divide-x divide-gray-300 w-max">
+                                    <div class="h-6 w-6 flex items-center justify-center cursor-pointer select-none">-</div>
+                                    <div class="h-6 w-6 flex items-center justify-center">4</div>
+                                    <div class="h-6 w-6 flex items-center justify-center cursor-pointer select-none">+</div>
+                                </div>
+
+                                <!-- total -->
+                                <p class="text-gray-500 font-semibold space-y-2">
+                                    <span>Total: </span>
+                                    <span class="font-light">$89.34</span>
+                                </p>
+                            </div>
+
+                            <!-- delete -->
+                            <div class="text-xl text-gray-500">
+                                <i class="fas fa-trash cursor-pointer hover:text-primary transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cart end -->
+
+                <!-- cart -->
+                <div class="flex items-start gap-4 p-4 bg-white hover:bg-gray-100 transition duration-200 rounded border border-gray-200">
+                    <!-- image -->
+                    <img src="../images/sofa.jpg" alt="sofa" class="w-4/12 object-cover">
+                    <!-- detail -->
+                    <div class="flex-1">
+                        <h2 class="text-md font-medium uppercase">Comfortable L Shap Sofa</h2>
+                        
+                        <div class="flex justify-between items-start gap-10 mt-3">
+                            <div class="space-y-1">
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Availability: </span>
+                                    <span class="text-green-600 font-light">In stock</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Brand: </span>
+                                    <span class="font-light">xxx brand</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Category: </span>
+                                    <span class="font-light">Sofa</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Color: </span>
+                                    <span class="font-light">Black</span>
+                                </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class="text-sm space-y-2">
+                                <p class="text-gray-500 font-semibold space-y-2">
+                                    <span>Price: </span>
+                                    <span class="font-light">$89.34</span>
+                                </p>
+
+                                <!-- Quantity -->
+                                <div class="flex border border-gray-300 text-gray-500 divide-x divide-gray-300 w-max">
+                                    <div class="h-6 w-6 flex items-center justify-center cursor-pointer select-none">-</div>
+                                    <div class="h-6 w-6 flex items-center justify-center">4</div>
+                                    <div class="h-6 w-6 flex items-center justify-center cursor-pointer select-none">+</div>
+                                </div>
+
+                                <!-- total -->
+                                <p class="text-gray-500 font-semibold space-y-2">
+                                    <span>Total: </span>
+                                    <span class="font-light">$89.34</span>
+                                </p>
+                            </div>
+
+                            <!-- delete -->
+                            <div class="text-xl text-gray-500">
+                                <i class="fas fa-trash cursor-pointer hover:text-primary transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cart end -->
+
+                <!-- cart -->
+                <div class="flex items-start gap-4 p-4 bg-white hover:bg-gray-100 transition duration-200 rounded border border-gray-200">
+                    <!-- image -->
+                    <img src="../images/sofa.jpg" alt="sofa" class="w-4/12 object-cover">
+                    <!-- detail -->
+                    <div class="flex-1">
+                        <h2 class="text-md font-medium uppercase">Comfortable L Shap Sofa</h2>
+                        
+                        <div class="flex justify-between items-start gap-10 mt-3">
+                            <div class="space-y-1">
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Availability: </span>
+                                    <span class="text-green-600 font-light">In stock</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Brand: </span>
+                                    <span class="font-light">xxx brand</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Category: </span>
+                                    <span class="font-light">Sofa</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Color: </span>
+                                    <span class="font-light">Black</span>
+                                </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class="text-sm space-y-2">
+                                <p class="text-gray-500 font-semibold space-y-2">
+                                    <span>Price: </span>
+                                    <span class="font-light">$89.34</span>
+                                </p>
+
+                                <!-- Quantity -->
+                                <div class="flex border border-gray-300 text-gray-500 divide-x divide-gray-300 w-max">
+                                    <div class="h-6 w-6 flex items-center justify-center cursor-pointer select-none">-</div>
+                                    <div class="h-6 w-6 flex items-center justify-center">4</div>
+                                    <div class="h-6 w-6 flex items-center justify-center cursor-pointer select-none">+</div>
+                                </div>
+
+                                <!-- total -->
+                                <p class="text-gray-500 font-semibold space-y-2">
+                                    <span>Total: </span>
+                                    <span class="font-light">$89.34</span>
+                                </p>
+                            </div>
+
+                            <!-- delete -->
+                            <div class="text-xl text-gray-500">
+                                <i class="fas fa-trash cursor-pointer hover:text-primary transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cart end -->
+
+                <!-- cart -->
+                <div class="flex items-start gap-4 p-4 bg-white hover:bg-gray-100 transition duration-200 rounded border border-gray-200">
+                    <!-- image -->
+                    <img src="../images/sofa.jpg" alt="sofa" class="w-4/12 object-cover">
+                    <!-- detail -->
+                    <div class="flex-1">
+                        <h2 class="text-md font-medium uppercase">Comfortable L Shap Sofa</h2>
+                        
+                        <div class="flex justify-between items-start gap-10 mt-3">
+                            <div class="space-y-1">
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Availability: </span>
+                                    <span class="text-green-600 font-light">In stock</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Brand: </span>
+                                    <span class="font-light">xxx brand</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Category: </span>
+                                    <span class="font-light">Sofa</span>
+                                </p>
+            
+                                <p class="text-gray-500 text-sm font-semibold space-x-2">
+                                    <span>Color: </span>
+                                    <span class="font-light">Black</span>
+                                </p>
+                            </div>
+
+                            <!-- price -->
+                            <div class="text-sm space-y-2">
+                                <p class="text-gray-500 font-semibold space-y-2">
+                                    <span>Price: </span>
+                                    <span class="font-light">$89.34</span>
+                                </p>
+
+                                <!-- Quantity -->
+                                <div class="flex border border-gray-300 text-gray-500 divide-x divide-gray-300 w-max">
+                                    <div class="h-6 w-6 flex items-center justify-center cursor-pointer select-none">-</div>
+                                    <div class="h-6 w-6 flex items-center justify-center">4</div>
+                                    <div class="h-6 w-6 flex items-center justify-center cursor-pointer select-none">+</div>
+                                </div>
+
+                                <!-- total -->
+                                <p class="text-gray-500 font-semibold space-y-2">
+                                    <span>Total: </span>
+                                    <span class="font-light">$89.34</span>
+                                </p>
+                            </div>
+
+                            <!-- delete -->
+                            <div class="text-xl text-gray-500">
+                                <i class="fas fa-trash cursor-pointer hover:text-primary transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cart end -->
+
+            </div>
+            <!-- end cart products -->
+
+            <div class="col-span-4">
+                <div class="border border-gray-200 p-4 rounded">
+                    <h4 class="text-slate-800 text-lg mb-4 font-medium uppercase">Cart Items</h4>
+    
+                    <div class="space-y-4 border-b border-slate-200 pb-4">
+                        <!-- itesm -->
+                        <div class="flex justify-between">
+                            <div class="">
+                                <h5 class="text-slate-800 font-medium">Comfortable sofa</h5>
+                                <p class="text-sm text-slate-800">Size: M</p>
+                            </div>
+                            <p class="text-slate-600">x3</p>
+                            <p class="text-slate-800 font-medium">$454</p>
+                        </div>
+    
+                        <div class="flex justify-between">
+                            <div class="">
+                                <h5 class="text-slate-800 font-medium">Comfortable sofa</h5>
+                                <p class="text-sm text-slate-800">Size: M</p>
+                            </div>
+                            <p class="text-slate-600">x3</p>
+                            <p class="text-slate-800 font-medium">$454</p>
+                        </div>
+    
+                        <div class="flex justify-between">
+                            <div class="">
+                                <h5 class="text-slate-800 font-medium">Comfortable sofa</h5>
+                                <p class="text-sm text-slate-800">Size: M</p>
+                            </div>
+                            <p class="text-slate-600">x3</p>
+                            <p class="text-slate-800 font-medium">$454</p>
+                        </div>
+                    </div>
+                    
+                    <!-- subtotal -->
+                    <div class="flex justify-between border-b border-slate-200 py-3 uppercase">
+                        <h5 class="text-slate-800 font-medium">Subtotal</h5>
+                        <p class="text-slate-800 font-medium">$1454</p>
+                    </div>
+    
+                    <!-- shipping cost-->
+                    <div class="flex justify-between py-3 uppercase border-b border-slate-200">
+                        <h5 class="text-slate-800 font-medium">Shipping fee</h5>
+                        <p class="text-slate-800 font-medium">$10</p>
+                    </div>
+    
+                    <!-- total -->
+                    <div class="flex justify-between py-3 mb-2 uppercase">
+                        <h5 class="text-slate-800 font-medium">Total</h5>
+                        <p class="text-slate-800 font-medium">$1623</p>
+                    </div>
+    
+                    <!-- checkbout btn -->
+                    <a href="./checkout.html" type="button" class="block text-center bg-primary border border-primary text-white py-2 uppercase rounded-md hover:bg-transparent hover:text-slate-900 transition w-full">Begin Checkout</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cart wrapper end -->
+
+    <!-- footer  -->
+    <footer>
+        <div class="container pt-10 pb-12 border-t border-gray-100 grid grid-cols-3 gap-11">
+            <div class="cols-span-1 space-y-8">
+                <!-- <img src="./images/" alt=""> -->
+                <a href="../index.html">
+                    <img src="../images/logo.svg" alt="logo" class="w-10 h-10">
+                </a>
+                <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, adipisci! Sit fugiat doloribus reiciendis assumenda ducimus, unde debitis cupiditate eius?</p>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                
+            </div>
+
+
+            <div class="col-span-2 grid grid-cols-2 gap-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analytics</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Commerce</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Support</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Pricing</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Documentation</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Guides</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">API Status</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Company</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">About</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Blog</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Jobs</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Press</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Legal</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Claim</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Privacy</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Policy</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Terms</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </footer>
+    <section class="p-5 bg-slate-900">
+        <div class="container flex items-center justify-between">
+            <p class="text-slate-300">&copy; Company - All right reserved</p>
+            <p class="text-slate-300">Payment methods</p>
+        </div>
+    </section>
+    <!-- footer end -->
+</body>
+</html>
